@@ -1,9 +1,11 @@
 function sorted_matrix = bubbleSort(matrix)
     % Loop through each column of the matrix
-    for col = 1:size(matrix, 1)
+    num_cols = size(matrix,2);
+    num_rows = size(matrix,1);
+    for col = 1:num_cols
         % Apply bubble sort to the current column
-        for i = 1:size(matrix, 1)-1
-            for j = 1:size(matrix, 1)-i
+        for i = 1:num_rows-1
+            for j = 1:num_rows-i
                 if matrix(j, col) > matrix(j+1, col)
                     % Swap elements
                     temp = matrix(j, col);
